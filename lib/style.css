@@ -1,0 +1,38 @@
+
+
+.react-slide{
+    overflow: hidden;
+    position: relative;
+}
+.react-slide .content{
+    display: flex;
+    width: 300%;
+}
+.react-slide .content > div{
+    width: 33.33333%;
+    position: relative;
+}
+.react-slide .content > div:first-child{
+    margin-left: -33.33333%;
+}
+.react-slide .content > div img{
+    width: 100%;
+}
+.react-slide .spot{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.react-slide .spot div{
+    width: 6px;
+    height: 6px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin: 0 4px;
+}
+.react-slide .spot div.cur{
+    background-color: #fff;
+}
+
