@@ -7,10 +7,13 @@ interface Props {
     speed?: number
     spot?: boolean
     type?: 'ease' | 'linear' | 'ease-in' | 'ease-out' | 'ease-in-out' | string
+    clockwise?: boolean
     onClick?: (index: number) => void
     onChange?: (index: number) => void
     onNext?: (index: number) => void
     onPrev?: (index: number) => void
+    className?: string
+    style?: React.CSSProperties
 }
 
 interface State {
@@ -34,7 +37,8 @@ export default class Entry extends React.Component<Props, State> {
         time: 3000,
         speed: 300,
         type: 'ease',
-        spot: true
+        spot: true,
+        clockwise: true
     }
 
     state = {
@@ -71,7 +75,11 @@ export default class Entry extends React.Component<Props, State> {
 
     render() {
         return (
-            <Style ref={this.contentRef} className='react-slide'>
+            <Style 
+                ref={this.contentRef} 
+                className={this.props.className}
+                style={this.props.style}
+            >
                 <div
                     className='content'
                     style={{
@@ -216,7 +224,7 @@ export default class Entry extends React.Component<Props, State> {
 
     setTimer = () => {
         if (this.props.time) {
-            this.touch.timer = setInterval(this.next, this.props.time)
+            this.touch.timer = setInterval(this.props.clockwise ? this.next : this.prev, this.props.time)
         }
     }
 }

@@ -22,6 +22,7 @@ const render = () => {
         spot={true}
         speed={300}
         type={'ease'}
+        clockwise={true}
         onClick={(i) => {
             console.log('click', i)
         }}
