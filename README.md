@@ -14,6 +14,8 @@ yarn add @wyhaya/react-slide
 
 ## Example
 
+> Component styles use [styled-components](https://github.com/styled-components/styled-components)
+
 ```typescript
 import Slide from 'react-slide'
 
@@ -25,7 +27,7 @@ ReactDOM.render(
 )
 ```
 
-### API
+### Interface
 
 | Props        | Type                   | Default   | Explain                                      |
 | -------------  | -------------   | -------------  | -------------                                |
@@ -41,7 +43,6 @@ ReactDOM.render(
 | `onNext?`        | `(index: number) => void` | `-`  | Callback function after index backwards      |
 
 
-### More
+### License
 
-* [Vue slide component](https://github.com/wyhaya/vue-slide)
-
+[MIT](./LICENSE) LICENSE
