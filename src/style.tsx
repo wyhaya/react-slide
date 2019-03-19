@@ -6,7 +6,6 @@ const Style = styled.div`
     .content {
         display: flex;
         width: 300%;
-        touch-action: none;
         & > div {
             width: 33.33333%;
             position: relative;
