@@ -17,7 +17,7 @@ yarn add @wyhaya/react-slide
 > Component styles use [styled-components](https://github.com/styled-components/styled-components)
 
 ```typescript
-import Slide from 'react-slide'
+import Slide from '@wyhaya/react-slide'
 
 const imgs = ['1.jpg', '2.jpg', '3.jpg']
 
