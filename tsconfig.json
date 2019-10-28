@@ -4,6 +4,7 @@
     "declarationDir": "dist/types",
     "jsx": "react",
     "lib": ["es2015", "es2017", "dom"],
+    "skipLibCheck": true,
     "module": "commonjs",
     "outDir": "dist/",
     "target": "es5",
